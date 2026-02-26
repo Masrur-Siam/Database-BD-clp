@@ -1,40 +1,36 @@
-# CSE210 - DBMS Lab Performance 04
+# CSE210 - Database Management Systems Lab
 
-## Project Overview
-This project demonstrates the implementation of a Relational Database Management System (RDBMS) using MySQL. It includes the creation of a database schema, establishing relationships through Primary Keys (PK) and Foreign Keys (FK), and applying various constraints to ensure data integrity.
+## Project: Constraints and ERD Implementation
+This project focuses on the practical implementation of an Entity Relationship Diagram (ERD) using MySQL. It demonstrates the use of primary keys, foreign keys, and various data constraints to maintain a structured and reliable database system.
 
-## Lab Details
-* **Lab Name:** Constraints and ERD Implementation
+## Lab Performance Information
 * **Course Code:** CSE210
-* **Submission Date:** February 26, 2026
-
-## Entity Relationship Implementation
-The database `LabPerformance04` consists of four interconnected tables:
-1.  **COUNTRY:** Stores regional information.
-2.  **DEPARTMENT:** Academic/Organizational units linked to countries.
-3.  **EMPLOYEE:** Staff details linked to departments.
-4.  **FOLDER:** Personal folders assigned to specific employees.
-
-### Implemented Constraints
-* **Primary Keys (PK):** Unique identifier for each table.
-* **Foreign Keys (FK):** Maintains referential integrity between tables.
-* **NOT NULL:** Ensures mandatory fields are not left empty.
-* **UNIQUE:** Applied to `country_name` to prevent duplicate entries.
-* **CHECK:** Used on `salary` or `emp_id` to validate numerical ranges.
-* **ENUM:** Used for `dept_status` to restrict values to 'Active' or 'Inactive'.
-
-## Database Schema (SQL Script)
-The implementation includes:
-- Schema creation.
-- Table definitions with constraints.
-- Insertion of 5 sample rows per table.
-
-## How to Use
-1. Clone this repository.
-2. Import the `LabPerformance04.sql` file into your MySQL environment (XAMPP/phpMyAdmin).
-3. Run the queries to see the table structures and data.
-
-## Author
-* **Name:** Masrur Hossain Siam
-* **ID:** 242002123
+* **Course Title:** Database Management Systems
+* **Task:** Lab Performance 04
+* **Student Name:** Masrur Hossain Siam
 * **University:** Green University of Bangladesh
+
+## Database Schema Overview
+The implementation includes a database named `LabPerformance04` with the following entities:
+1. **COUNTRY**: Stores regional details with a UNIQUE constraint on the country name.
+2. **DEPARTMENT**: Academic units categorized by status (Active/Inactive) using ENUM.
+3. **EMPLOYEE**: Employee records with a CHECK constraint to ensure valid ID ranges.
+4. **FOLDER**: Files/Folders assigned to specific employees to maintain data organization.
+
+## Key Features Implemented
+* **Referential Integrity**: Established using Primary Keys (PK) and Foreign Keys (FK).
+* **Data Validation**: 
+  - `NOT NULL` for mandatory fields.
+  - `UNIQUE` for non-duplicate country entries.
+  - `CHECK` constraint for numerical validation.
+  - `ENUM` for predefined status options.
+* **Sample Data**: 5 rows of realistic data inserted into each table for testing.
+
+## How to Run the Script
+1. Open your MySQL environment (XAMPP/MySQL Workbench/phpMyAdmin).
+2. Create a new database or use the script to generate one automatically.
+3. Import the provided `.sql` file.
+4. Run the following commands to verify:
+   ```sql
+   DESCRIBE COUNTRY;
+   SELECT * FROM COUNTRY;
